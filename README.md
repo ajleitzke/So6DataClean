@@ -2,5 +2,5 @@
 
 Run:
 ```
-python main.py
+python clean-data.py
 ```
