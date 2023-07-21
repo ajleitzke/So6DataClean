@@ -22,8 +22,8 @@ def export(df_joined):
 
 
 if __name__ == '__main__':
-    pd.set_option('display.max_columns', None)
-    dataFile = 'data.xlsx'
+    input('The following tool will clean South of 6 Call for Service data. Press ENTER to continue.')
+    dataFile = input('What is the name of the updated file (include the .xlsx extension)? ')
     addressList = 'addresses.xlsx'
     df_calls, df_address = prepare(dataFile, addressList)
     df_joined = join(df_calls, df_address)
