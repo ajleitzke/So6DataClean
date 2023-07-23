@@ -22,7 +22,7 @@ def export(df_joined):
 
 
 if __name__ == '__main__':
-    input('The following tool will clean South of 6 Call for Service data. Press ENTER to continue.')
+    input('The following tool will clean South of 6 Call for Service data. Press ENTER to continue.\n')
     dataFile = input('What is the name of the updated file (include the .xlsx extension)? ')
     addressList = 'addresses.xlsx'
     df_calls, df_address = prepare(dataFile, addressList)
