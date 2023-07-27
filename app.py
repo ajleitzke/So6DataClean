@@ -2,7 +2,6 @@
 from io import BytesIO
 from flask import Flask, render_template, request, Response, send_file
 from flask_sqlalchemy import SQLAlchemy
-import pandas as pd
 import clean_data
 
 # Initialize flask  and create sqlite database
@@ -35,7 +34,7 @@ def download(upload_id):
     upload = Upload.query.filter_by(id=upload_id).first()
     file = BytesIO(upload.data)
     dataFile = file
-    addressList = '/home/ajleitzke/mysite/addresses.xlsx'
+    addressList = 'addresses.xlsx'
     df_calls, df_address = clean_data.prepare(dataFile, addressList)
     df_joined = clean_data.join(df_calls, df_address)
     df_joined.to_excel(buffer, index=False)
