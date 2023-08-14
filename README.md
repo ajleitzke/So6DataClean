@@ -2,5 +2,5 @@
 
 Run:
 ```
-python clean-data.py
+flask run
 ```
